@@ -7,15 +7,15 @@ public class PersonaPoo {
      * Definicion de atributos de la persona
      */
 
-    String nombre;
-    int edad;
-    String  direccion;
-    String apellido;
-    String DNI;
-    String email;
-    String telefono;
-    String profesion;
-    String anios_experiencia;
+    private String nombre;
+    private int edad;
+    private String  direccion;
+    private String apellido;
+    private String DNI;
+    private String email;
+    private String telefono;
+    private String profesion;
+    private String anios_experiencia;
 
 
     /**
@@ -46,6 +46,13 @@ public class PersonaPoo {
         this.direccion=direccion;
     }
 
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    public String getNombre(){
+        return this.nombre;
+    }
+    
     public int getEdad(){
 
         return this.edad;
@@ -112,10 +119,11 @@ public class PersonaPoo {
                 
         return false;
     }
-
-
     }
 
+    public void informacion(){
+        System.out.println("Nombre: " + nombre + ", edad: " + edad + ", direccion: " + direccion + ", dni: " + DNI + ", email: " + email + ", telefono: " + telefono + ", profesion: " + profesion + ", años de experiencia: " + anios_experiencia + "." );
+    }
 
 }
 

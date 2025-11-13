@@ -2,6 +2,8 @@ package poo;
 
 public class Libro {
     
+    //Crear atributos para libro
+
     private String titulo;
     private String ISBN;
     private String editorial;
@@ -9,6 +11,8 @@ public class Libro {
     private int numPag;
     private int anio;
     private boolean dispReserva;
+
+    //Crear constructor de libro
 
     public Libro(String titulo,String ISBN, String editorial, String idioma, int numPag, int anio, boolean dispReserva) {
 
@@ -21,6 +25,8 @@ public class Libro {
         this.dispReserva = dispReserva;
 
     }
+
+    //Crear get y set para cada atributo de libro
 
     public void setTitulo ( String titulo) {
         this.titulo = titulo;
@@ -76,6 +82,8 @@ public class Libro {
         return this.dispReserva;
     }
 
+    //Metodo para saber si el libro se encuentra disponible
+
     public boolean estaDisponible(){
         if (dispReserva==true){
             System.out.println("El libro se encuentra disponible para su reserva");
@@ -84,11 +92,15 @@ public class Libro {
             return false;}
     }
 
+    //Metodo para saber si el libro esta escrito en español o en otro idioma
+
     public void esExtranjero(){
         if (idioma.equals("Espanyol")) {
             System.out.println("El libro está escrito en Español");  
         }else {System.out.println("El libro no está escrito en Español, está escrito en " + this.idioma);}
     }
+
+    //Metodo para mostrar informacion del libro
 
     public void informacion(){
         System.out.println("Libro: " + this.titulo + "," + this.editorial + "," + this.anio + "," + this.idioma + "," + this.numPag + "," + this.dispReserva + ".");

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class Biblioteca {
  
+  //Declarar variables y las listas  
+
   private String nombre;
   private String direccion;
   private int horaApertura;
@@ -14,6 +16,7 @@ public class Biblioteca {
   private List<Sala>salas;
 
 
+  //Crear constructor
 
   public Biblioteca( String nombre, String direccion){
     this.nombre = nombre;
@@ -24,6 +27,7 @@ public class Biblioteca {
     this.salas = new ArrayList<>();
 }
 
+//Añadir, eliminar y mostrar  libros
 
 public void addLibro(Libro libro){
     this.libros.add(libro);
@@ -50,6 +54,8 @@ public void mostrarLibros(){
     }
 }
 
+//Añadir, eliminar y mostrar salas
+
 public void addSala (Sala sala){
     this.salas.add(sala);
     System.out.println("La sala ha sido añadida");
@@ -74,6 +80,8 @@ public void mostrarSalas(){
     }
 }
 
+//Metodo para verificar si está abierta
+
 public void estaAbierta(int hora) {
 
     if (hora > this.horaApertura && hora < this.horaCierre) {
@@ -83,6 +91,7 @@ public void estaAbierta(int hora) {
     }
 }
 
+//Metodos para mostrar informacion y mostrar datos de la biblioteca
 
 public void informacion(){
     System.out.println("Biblioteca: " + nombre + "," + direccion + "." + "Abierto de " + horaApertura + " a " + horaCierre+ ".");
@@ -119,6 +128,8 @@ public void mostrarBiblioteca(){
     }
 }
 
+//Metodo para buscar libro por el titulo
+
 public Libro buscarLibroPorTitulo(String titulo){
     for(Libro libro : this.libros){
         if (libro.getTitulo().equals(titulo)) {
@@ -127,6 +138,8 @@ public Libro buscarLibroPorTitulo(String titulo){
     }
     return null;
 } 
+
+//Metodo para mostrar las salas vacias
 
 public void mostrarSalasDisponibles(){
  System.out.println( "Numero de salas vacías ");
@@ -137,6 +150,8 @@ public void mostrarSalasDisponibles(){
             } 
         }
     }
+
+//Metodo para mostrar el total de personas en una sala
 
 public void mostrarTotalPersonas(){
 

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class Sala {
     
+    //Crear atributos de la sala
+
     private String nombre;
     private int capacidad;
     private boolean pizarra;
@@ -12,6 +14,8 @@ public class Sala {
     private boolean dispReserva;
     private List<PersonaPoo>personas;
     private int numeroPersonas;
+
+    //Crear constructor de la sala
 
     public Sala(String nombre, int capacidad, boolean pizarra, String tipo, boolean dispReserva){
 
@@ -24,6 +28,8 @@ public class Sala {
         this.numeroPersonas = 0;
 
     }
+    
+    //Crear get y set para cada atributo de la sala 
 
     public void setNombre(String nombre){
         this.nombre = nombre;
@@ -64,6 +70,8 @@ public class Sala {
         return this.numeroPersonas;
     }
 
+    //Crear metodo para saber si la sala se encuentra disponible para reserva
+
     public boolean estaDisponible(){
         if (dispReserva==true){
             System.out.println("La sala se encuentra disponible para su reserva");
@@ -71,6 +79,8 @@ public class Sala {
         }else {System.out.println("La sala no encuentra disponible para su reserva"); 
             return false;}
     }
+
+    //Crear metodo para saber si la sala tiene pizarra
 
     public boolean tienePizarra(){
         if (pizarra==true) {
@@ -80,9 +90,13 @@ public class Sala {
         return false;}
     }
     
+    //Metodo para mostrar informacion de la sala
+
     public void informacion(){
         System.out.println("Sala: " + nombre + ", " + capacidad+ "." + tipo + ", " + pizarra + ", " + dispReserva + "."); 
     }
+
+    //Metodo para saber si la persona entra o no
 
     public boolean entrarPersona(PersonaPoo p){
         if (this.personas.size()<this.getCapacidad()){
@@ -92,6 +106,9 @@ public class Sala {
         } else {System.out.println("La persona no puede entrar");}
         return false;
     }
+
+    //Metodo para sacar a la persona de la sala
+
     public boolean salirPersona(PersonaPoo p){
         if (this.getCapacidad()>0 && this.personas.remove(p)) {
             System.out.println("La persona " + p.getNombre() + "ha sido eliminada");
@@ -105,6 +122,8 @@ public class Sala {
             return false;
         }  
     }
+
+    //Metodo para mostrar la persona y su informacion
 
     public void mostrarPersonas(){
 

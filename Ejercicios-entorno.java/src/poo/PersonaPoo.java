@@ -41,6 +41,8 @@ public class PersonaPoo {
         System.out.println("Nombre " + this.nombre + " , edad: " + this.edad + " y vive en " + this.direccion) ;
     }
 
+    //Crear get y set para cada atributo
+
     public void setDireccion (String direccion) {
 
         this.direccion=direccion;
@@ -101,9 +103,12 @@ public class PersonaPoo {
     public void setAnios_experiencia(String anios_experiencia) {
         this.anios_experiencia = anios_experiencia;
     }
+    
     public String getAnios_experiencia() {
         return this.anios_experiencia;
     }
+
+    //Metodo para mostrar si la persona esta jubilada 
 
     public boolean estaJubilado(){
 
@@ -120,6 +125,8 @@ public class PersonaPoo {
         return false;
     }
     }
+
+    //Metodo para mostrar datos de la persona
 
     public void informacion(){
         System.out.println("Nombre: " + nombre + ", edad: " + edad + ", direccion: " + direccion + ", dni: " + DNI + ", email: " + email + ", telefono: " + telefono + ", profesion: " + profesion + ", años de experiencia: " + anios_experiencia + "." );

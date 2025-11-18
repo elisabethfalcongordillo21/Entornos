@@ -22,7 +22,7 @@ public class PersonaPoo {
      * Defincion del comportamiento de la persona
      */
 
-     public PersonaPoo (String nombre, int edad) {
+     public PersonaPoo (String nombre, int edad, String direccion, String apellido, String DNI, String email, String telefono, String profesion, String anios_experiencia) {
 
         this.nombre = nombre;
         this.edad = edad;

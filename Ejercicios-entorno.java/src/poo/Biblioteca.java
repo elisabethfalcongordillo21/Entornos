@@ -1,6 +1,7 @@
 package poo;
 
 import java.util.List;
+import java.security.Permissions;
 import java.util.ArrayList;
 
 public class Biblioteca {
@@ -15,16 +16,21 @@ public class Biblioteca {
   private List<Libro>libros;
   private List<Sala>salas;
 
+  //Practica 5
+  private List<PersonaPoo>personas;
 
   //Crear constructor
 
-  public Biblioteca( String nombre, String direccion){
+  public Biblioteca( String nombre, String direccion, int horaApertura, int horaCierre){
     this.nombre = nombre;
     this.direccion = direccion;
     this.horaApertura = 9;
     this.horaCierre = 22;
     this.libros = new ArrayList<>();
     this.salas = new ArrayList<>();
+
+    //Practica 5
+    this.personas =  new ArrayList<>();
 }
 
 //Añadir, eliminar y mostrar  libros
@@ -93,9 +99,6 @@ public void estaAbierta(int hora) {
 
 //Metodos para mostrar informacion y mostrar datos de la biblioteca
 
-public void informacion(){
-    System.out.println("Biblioteca: " + nombre + "," + direccion + "." + "Abierto de " + horaApertura + " a " + horaCierre+ ".");
-}
 
 public void mostrarBiblioteca(){
     System.out.println("El nombre de la biblioteca es: " + this.nombre);
@@ -160,6 +163,42 @@ public void mostrarTotalPersonas(){
         totalPersonas += sala.getNumeroPersonas();
     }
     System.out.println("El total de personas en la sala es: " + totalPersonas);
+}
+
+//Metodos para practica 5
+
+
+public void registroVisita(PersonaPoo visitante ){
+
+    System.out.println(visitante.getNombre() + " ha estado en la biblioteca " + nombre);
+
+}
+
+public void registrarPrestamo(PersonaPoo prestador, Libro libro){
+
+    System.out.println(prestador.getNombre() + " ha cogido prestado el libro " + libro.getTitulo());
+
+}
+
+//metodo para registrar el responsable
+public void asignarResponsable(Sala s, PersonaPoo personaResponsable)
+{
+  if (salas.contains(s)) 
+  {
+    s.setPersonaResponsable(personaResponsable); 
+    System.out.println("La persona responsable de la sala " +  s.getNombre() +" es: " + personaResponsable);
+  }else
+  {
+    System.out.println("La sala: " + s.getNombre() + " no tiene ninguna persona responsable, ya que no pertecene a la biblioteca " + nombre);
+  }
+}
+
+
+public void mostrarInformacion(){
+    System.out.println("Biblioteca: " + nombre + "," + direccion + "." + "Abierto de " + horaApertura + " a " + horaCierre+ ". " + "Los libros disponibles son: " + this.libros.size() + ". Las salas que hay en la biblioteca son: " + this.salas.size() );
+
+
+
 }
 
 

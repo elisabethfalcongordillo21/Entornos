@@ -1,6 +1,6 @@
 package Apartado3;
 
-import java.sql.Date;
+import java.util.Date;;
 
 public class Persona {
     
@@ -8,6 +8,8 @@ public class Persona {
     private String nombre=" ";
     private Date fechaNacimiento;
 
+    public Persona(){}
+    
     public Persona(String dni, String nombre, Date fechaNacimiento){
 
         this.dni=dni;
@@ -16,7 +18,7 @@ public class Persona {
     }
 
     public int getEdad(){
-
+        return 0;
     }
 
     

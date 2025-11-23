@@ -1,13 +1,20 @@
 package Apartado3;
-public class Profesor {
+
+import java.util.Date;
+
+public class Profesor extends Persona {
 
     private double salario =0;
+    private Curso cursoAsignado;
 
-    public Profesor( double salario ){
+    
+
+    public Profesor(String dni, String nombre, Date fechaNacimiento, double salario ){
+        super(dni, nombre, fechaNacimiento);
         this.salario=salario;
     }
     
-    public void  asignarCurso(c : Curso){
-
+    public void  asignarCurso(Curso c){
+        this.cursoAsignado = c;
     }
 }

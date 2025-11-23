@@ -5,7 +5,6 @@ public class Universidad {
     // relación 1..* con Departamento
     private Departamento[] departamentos;
 
-    public Universidad() {}
 
     public Universidad(String nombre) {
         this.nombre = nombre;

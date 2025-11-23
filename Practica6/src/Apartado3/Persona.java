@@ -8,7 +8,6 @@ public class Persona {
     private String nombre=" ";
     private Date fechaNacimiento;
 
-    public Persona(){}
     
     public Persona(String dni, String nombre, Date fechaNacimiento){
 

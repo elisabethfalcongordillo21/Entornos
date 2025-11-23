@@ -9,7 +9,6 @@ public class Horario {
 
     private Curso curso; // relación hacia Curso
 
-    public Horario() {}
 
     public Horario(String diaSemana, Time horaInicio, Time horaFin) {
         this.diaSemana = diaSemana;

@@ -8,7 +8,7 @@ public class Curso {
     private Horario[] horarios;        // 1..*
     private Matricula[] inscripciones; // 0..*
 
-    public Curso() {}
+    
 
     public Curso(String codigo, String nombre, int cupoMaximo) {
         this.codigo = codigo;

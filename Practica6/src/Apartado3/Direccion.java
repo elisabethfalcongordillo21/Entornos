@@ -6,7 +6,6 @@ public class Direccion {
 
     private Persona persona; // relación 1 a 1
 
-    public Direccion() {}
 
     public Direccion(String calle, int numero, String ciudad) {
         this.calle = calle;

@@ -9,7 +9,6 @@ public class Matricula {
     private Curso curso;        // relación
     private Estudiante alumno;  // relación
 
-    public Matricula() {}
 
     public Matricula(Date fecha, Curso curso, Estudiante alumno) {
         this.fecha = fecha;

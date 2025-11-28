@@ -1,18 +1,45 @@
-## Getting Started
+Sistema de Gestión de Pedidos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Resumen del proyecto
 
-## Folder Structure
+    En este proyecto he creado varias clases en Java a partir de un diagrama UML (src.puml).
+    Primero generé el código base usando un script en Python y después completé a mano los métodos y el funcionamiento del programa.
+    Las clases que forman el proyecto son: Producto, ProductoFisico, ProductoDigital, Cliente, Pedido y la clase Main para probar todo.
 
-The workspace contains two folders by default, where:
+Cómo ejecutar el programa
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+    Abrir el proyecto en Visual Studio Code.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+    Ir a la carpeta src donde están todos los .java.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+    Ejecutar la clase Main.java
 
-## Dependency Management
+Desde Visual Studio Code
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+    Abrir Main.java.
+
+    Darle al botón Run.
+
+
+Archivos principales
+
+    Cliente.java
+
+    Producto.java
+
+    ProductoFisico.java
+
+    ProductoDigital.java
+
+    Pedido.java
+
+    Main.java
+
+    src.puml (diagrama UML)
+
+    README.md
+
+Nota sobre el UML
+
+    El diagrama UML se puede ver en Visual Studio Code con la extensión PlantUML (ALT + D).
+

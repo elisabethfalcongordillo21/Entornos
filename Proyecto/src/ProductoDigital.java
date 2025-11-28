@@ -16,6 +16,6 @@ public class ProductoDigital extends Producto {
 
     @Override
     public double calcularPrecioFinal() {
-        return getPrecio() * 0.90; // ejemplo de descuento digital
+        return getPrecio() * 0.90; // descuento digital
     }
 }

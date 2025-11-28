@@ -27,10 +27,18 @@ public class Cliente {
         return correo;
     }
 
+
     public void setCorreo(String correo) {
         this.correo = correo;
     }
     
+
+    public void setCorreo(String correo)
+    {
+        this.correo;
+    }
+
+
     public String getDireccion()
     {
         return direccion;
@@ -41,4 +49,8 @@ public class Cliente {
         this.direccion=direccion;
     }
 
+
 }
+
+
+

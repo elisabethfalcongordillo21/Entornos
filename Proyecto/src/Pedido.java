@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 9530f17cbb738ab6b97b058382c0c7ef5a781119
 import java.util.ArrayList;
 import java.util.List;
 

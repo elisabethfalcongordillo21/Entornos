@@ -33,12 +33,6 @@ public class Cliente {
     }
     
 
-    public void setCorreo(String correo)
-    {
-        this.correo;
-    }
-
-
     public String getDireccion()
     {
         return direccion;

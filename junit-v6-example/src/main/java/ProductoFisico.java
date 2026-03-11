@@ -6,7 +6,6 @@ public class ProductoFisico extends Producto{
         this.costeEnvio = costeEnvio;
     }
 
-    
     public double getCosteEnvio() {
         return costeEnvio;
     }
@@ -16,7 +15,7 @@ public class ProductoFisico extends Producto{
     }
 
     @Override
-    public double calcularPrecioFinal() {
+    public double calcularPrecio() {
         return getPrecio() + costeEnvio;
     }
     

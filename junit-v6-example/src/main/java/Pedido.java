@@ -49,7 +49,7 @@ public double calcularTotal()
     double total =0;
     for (Producto p :  productos)
     {
-        total += p.calcularPrecioFinal();
+        total += p.calcularPrecio();
     }
     return total;
 
@@ -66,10 +66,10 @@ public void mostrarInfo()
 
     for(Producto p : productos)
     {
-        System.out.println("-" + p.toString() + "€");
+        System.out.println("-" + p.toString() + " euros" );
     }
 
-    System.out.println("\nTotal: " + calcularTotal() + "€");
+    System.out.println("\nTotal: " + calcularTotal() + " euros");
 
 
 }

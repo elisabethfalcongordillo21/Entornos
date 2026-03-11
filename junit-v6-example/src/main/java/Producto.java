@@ -25,11 +25,11 @@ public abstract class Producto {
         this.precio = precio;
     }
 
-    public abstract double calcularPrecioFinal();
+    public abstract double calcularPrecio();
 
     @Override
     public String toString(){
-        return nombre + "-" + precio + "€";
+        return nombre + "-" + precio;
     }
 
 

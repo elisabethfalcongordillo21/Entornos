@@ -1,3 +1,4 @@
+package com.example.project;
 public class ProductoFisico extends Producto{
      private double costeEnvio;
 

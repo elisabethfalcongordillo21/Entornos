@@ -1,3 +1,4 @@
+package com.example.project;
 public class ProductoDigital extends Producto {
    
     private double tamanioDescarga;

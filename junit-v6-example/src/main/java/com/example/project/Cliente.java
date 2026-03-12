@@ -1,3 +1,4 @@
+package com.example.project;
 public class Cliente {
     private String nombre;
     private String correo;

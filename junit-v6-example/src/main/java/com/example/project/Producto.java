@@ -1,3 +1,4 @@
+package com.example.project;
 public abstract class Producto {
     
     private String nombre;

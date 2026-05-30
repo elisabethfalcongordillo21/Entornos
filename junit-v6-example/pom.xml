@@ -10,9 +10,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>17</maven.compiler.release>
+        <sonar.projectKey>Proyecto-4</sonar.projectKey>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.projectKey>proyecto3</sonar.projectKey>
-        <sonar.token>squ_6d9da120b755743ffb2acd3a3229dae871696c23</sonar.token>
+        <sonar.token>sqp_fd0c644fef3c199f2d8274d3887c8340beb91f0e</sonar.token>
     </properties>
 
     <dependencyManagement>

@@ -2,12 +2,15 @@ package com.example.project;
 public abstract class Producto {
     
     private String nombre;
-    private double precio;
+    private double precioBase;
 
-    public Producto(String nombre, double precio)
+    public Producto(String nombre, double precioBase)
     {
+        if (precioBase<0) {
+            throw new IllegalArgumentException("El precio no puede ser negativo");
+        }
         this.nombre=nombre;
-        this.precio=precio;
+        this.precioBase=precioBase;
     }
 
     public String getNombre() {
@@ -18,19 +21,18 @@ public abstract class Producto {
         this.nombre = nombre;
     }
 
-    public double getPrecio() {
-        return precio;
+    public double getPrecioBase() {
+        return precioBase;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setPrecioBase(double precioBase) {
+        this.precioBase = precioBase;
     }
 
-    public abstract double calcularPrecio();
-
+    public abstract double calcularPrecioFinal();
     @Override
     public String toString(){
-        return nombre + "-" + precio;
+        return nombre + "-" + precioBase;
     }
 
 

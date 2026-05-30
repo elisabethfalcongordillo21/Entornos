@@ -42,18 +42,33 @@ public void setProductos(List<Producto> productos)
 
 public void agregarProducto(Producto p)
 {
-    productos.add(p);
+     if (p != null) {
+        productos.add(p);
+    }
 }
+
+
+public void eliminarProducto(Producto p) {
+        productos.remove(p);
+}
+
 
 public double calcularTotal()
 {
-    double total =0;
-    for (Producto p :  productos)
+    if (productos.isEmpty()) {
+        throw new IllegalStateException("El pedido no tiene productos");
+    }
+    double total = 0;
+    for (Producto p : productos)
     {
-        total += p.calcularPrecio();
+        if (p instanceof ProductoFisico) {
+            ProductoFisico pf = (ProductoFisico) p;
+            total += pf.getPrecioBase() + pf.calcularCosteEnvio(cliente.getPais());
+        } else {
+            total += p.calcularPrecioFinal();
+        }
     }
     return total;
-
 }
 
 public void mostrarInfo()

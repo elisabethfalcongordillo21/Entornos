@@ -161,9 +161,13 @@ public class GestionPedidosTest {
         assertNotNull(p.getCliente());
         assertEquals(0, p.getProductos().size());
     }
+
+
+    // TEST PARA LLEGAR A MAS DEL 80% DE COBERTURA
+    
     // 16. POSITIVO - Tienda genera factura correctamente
    @Test
-void testTiendaGeneraFactura() {
+    void testTiendaGeneraFactura() {
     Cliente c = new Cliente("Eli", "e@e.com", "Mex", "123", 123, 0, false, "España");
     Pedido p = new Pedido(c);
     p.agregarProducto(new ProductoDigital("Ebook", 100.0, 0.0, 21.0, 0.0, "LIC-006"));
@@ -186,14 +190,10 @@ void testTiendaGeneraFactura() {
         assertFalse(c.getDescuento() > 0);
     }
 
-
-
-// test para llegar a mas del 80% de cobertura
-
     // ===== CLIENTE - getters sin cubrir =====
 
-@Test
-void testClienteGettersAdicionales() {
+    @Test
+    void testClienteGettersAdicionales() {
     Cliente c = new Cliente("Eli", "eli@gmail.com", "Calle Mexico", "46386812T", 66486521, 3, true, "España");
     assertEquals(3, c.getAñosAntiguedad());
     assertEquals("España", c.getPais());
@@ -201,8 +201,8 @@ void testClienteGettersAdicionales() {
     assertTrue(c.getEsVip());
 }
 
-@Test
-void testClienteSettersAdicionales() {
+    @Test
+    void testClienteSettersAdicionales() {
     Cliente c = new Cliente("Eli", "eli@gmail.com", "Calle Mexico", "46386812T", 66486521, 0, false, "España");
     c.setAñosAntiguedad(5);
     c.setPais("Francia");

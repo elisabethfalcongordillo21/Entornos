@@ -1,16 +1,31 @@
 package com.example.project;
-public abstract class Producto {
+
+// MEJORA: mejora para el test final
+public class Producto {
     
+    private int id; // MEJORA: mejora para el test final
     private String nombre;
     private double precioBase;
 
-    public Producto(String nombre, double precioBase)
+    // MEJORA: mejora para el test final
+    public Producto(int id, String nombre, double precioBase)
     {
         if (precioBase<0) {
             throw new IllegalArgumentException("El precio no puede ser negativo");
         }
+        this.id=id;
         this.nombre=nombre;
         this.precioBase=precioBase;
+    }
+
+    // MEJORA: mejora para el test final
+    public int getId() {
+        return id;
+    }
+
+    // MEJORA: mejora para el test final
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -29,11 +44,13 @@ public abstract class Producto {
         this.precioBase = precioBase;
     }
 
-    public abstract double calcularPrecioFinal();
+    // MEJORA: mejora para el test final
+    public double calcularPrecioFinal() {
+        return precioBase;
+    }
+
     @Override
     public String toString(){
         return nombre + "-" + precioBase;
     }
-
-
 }

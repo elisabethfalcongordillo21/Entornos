@@ -1,5 +1,6 @@
 package com.example.project;
 public class Cliente {
+    private int id; // MEJORA: cambio para el test final
     private String nombre;
     private String correo;
     private String direccion;
@@ -9,6 +10,14 @@ public class Cliente {
     private boolean esVip;
     private String pais;
 
+// MEJORA: cambio para el test final
+    public Cliente(int id, String nombre, int añosAntiguedad, boolean esVip, String pais) {
+        this.id = id;
+        this.nombre = nombre;
+        this.añosAntiguedad = añosAntiguedad;
+        this.esVip = esVip;
+        this.pais = pais;
+    }
 
     public Cliente(String nombre, String correo, String direccion, String dni, int telf,int añosAntiguedad, boolean esVip, String pais) {
         this.nombre = nombre;
@@ -20,7 +29,11 @@ public class Cliente {
         this.esVip = esVip;
         this.pais = pais;
     }
-    
+
+    // MEJORA: cambio para el test final
+    public int getId() {
+        return this.id;
+    }
 
     public String getNombre() {
         return this.nombre;
@@ -89,6 +102,7 @@ public class Cliente {
     public void setPais(String pais) {
         this.pais = pais;
     }
+
     public double getDescuento() {
         if (esVip && añosAntiguedad >= 5)
             return 0.15;
@@ -109,9 +123,4 @@ public class Cliente {
             "Dni:" + getDni() + "\n" +
             "Telefono:" + getTelf() + "\n" ;
     }
-
-
 }
-
-
-

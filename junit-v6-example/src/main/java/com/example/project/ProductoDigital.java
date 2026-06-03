@@ -6,8 +6,26 @@ public class ProductoDigital extends Producto {
     private double descuento;
     private String codigoLicencia;
 
+    // MEJORA: mejora para el test final
+    public ProductoDigital(int id, String nombre, double precio) {
+        super(id, nombre, precio);
+        this.tamanioDescarga = 0.0;
+        this.porcientoIVA = 21.0;
+        this.descuento = 0.0;
+        this.codigoLicencia = "";
+    }
+
+    // MEJORA: mejora para el test final
+    public ProductoDigital(int id, String nombre, double precio, double tamanioDescarga, double porcientoIVA, double descuento, String codigoLicencia) {
+        super(id, nombre, precio);
+        this.tamanioDescarga = tamanioDescarga;
+        this.porcientoIVA = porcientoIVA;
+        this.descuento = descuento;
+        this.codigoLicencia = codigoLicencia;
+    }
+
     public ProductoDigital(String nombre, double precio,double tamanioDescarga, double porcientoIVA, double descuento,String codigoLicencia) {
-        super(nombre,precio);
+        super(0, nombre, precio);
         this.tamanioDescarga = tamanioDescarga;
         this.porcientoIVA = porcientoIVA;
         this.descuento = descuento;
@@ -41,6 +59,7 @@ public class ProductoDigital extends Producto {
     public String getCodigoLicencia() { 
         return codigoLicencia;
     }
+
     public void setCodigoLicencia(String codigoLicencia) { 
         this.codigoLicencia = codigoLicencia; 
     }
@@ -56,7 +75,7 @@ public class ProductoDigital extends Producto {
 
     @Override
     public double calcularPrecioFinal() {
-        double precioConIva = aplicarIVA("GENERAL");
+        double precioConIva = getPrecioBase() * (1 + porcientoIVA / 100.0);
         double precioFinal = precioConIva - descuento;
         if (precioFinal < 0) return 0.0;
         return precioFinal;
@@ -66,5 +85,4 @@ public class ProductoDigital extends Producto {
     public String toString() {
         return getNombre() + " - " + getPrecioBase() + "€ (licencia: " + codigoLicencia + ")";
     }
-    
 }

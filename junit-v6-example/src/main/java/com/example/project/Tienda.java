@@ -1,5 +1,7 @@
 package com.example.project;
 
+import java.time.LocalDate;
+
 /**
  * Clase Tienda, se encarga de gestionar las ventas
  */
@@ -8,6 +10,11 @@ public class Tienda {
     private String nombre;
     private String direccion;
     private int telf;
+
+    private static int contadorFacturas = 1; // MEJORA: mejora para el test final
+
+    // MEJORA: mejora para el test final
+    public Tienda() {}
 
     /**
      * @param nombre nombre de la tienda
@@ -57,9 +64,34 @@ public class Tienda {
      * @return factura generada
      */
     public Factura realizarVenta(Cliente cliente, Pedido pedido) {
-        double totalBruto = pedido.calcularTotal();
-        double descuento = cliente.getDescuento();
-        double totalConDescuento = totalBruto * (1 - descuento);
-        return new Factura(cliente, pedido, totalConDescuento);
+
+        if (pedido.getProductos().isEmpty()) {
+            throw new IllegalArgumentException(Pedido.PRODUCT_LIST_EMPTY_EXCEPTION_MESSAGE);
+        }
+
+        String pais = cliente.getPais();
+        if (pais == null || pais.isBlank()) {
+            throw new IllegalArgumentException("El pais del cliente no puede ser nulo o estar vacio");
+        }
+
+        if (cliente.getId() != pedido.getCliente().getId()) {
+            throw new IllegalArgumentException("El cliente no coincide con el cliente del pedido");
+        }
+
+        double totalNeto = 0.0;
+        for (Producto p : pedido.getProductos()) {
+            int cantidad = pedido.getCantidades().getOrDefault(p.getId(), 1);
+            totalNeto += p.getPrecioBase() * cantidad;
+        }
+
+        double descuento = totalNeto * cliente.getDescuento();
+        double totalIva = pedido.calcularIva("GENERAL");
+        double totalEnvio = pedido.calcularEnvio(pais);
+        double totalFinal = totalNeto + totalIva + totalEnvio - descuento;
+
+        String codigoFactura = "FACT-" + LocalDate.now() + "-" + contadorFacturas;
+        contadorFacturas++;
+
+        return new Factura(codigoFactura, LocalDate.now(), totalNeto, totalIva, totalEnvio, totalFinal, descuento);
     }
 }

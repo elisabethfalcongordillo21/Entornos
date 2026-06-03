@@ -13,6 +13,23 @@ public class Factura {
     private double totalIva;
     private double totalEnvio;
     private double totalFinal;
+    private double descuento; // MEJORA: cambio para el test final
+
+    // MEJORA: cambio para el test final
+    public Factura() {}
+
+    // MEJORA: cambio para el test final
+    public Factura(String codigoFactura, LocalDate fechaEmision,
+                   double totalNeto, double totalIva, double totalEnvio,
+                   double totalFinal, double descuento) {
+        this.codigoFactura = codigoFactura;
+        this.fechaEmision = fechaEmision;
+        this.totalNeto = totalNeto;
+        this.totalIva = totalIva;
+        this.totalEnvio = totalEnvio;
+        this.totalFinal = totalFinal;
+        this.descuento = descuento;
+    }
 
     /**
      * Constructor, el codigo de factura se genera automaticamente
@@ -87,6 +104,28 @@ public class Factura {
     /** @param totalFinal nuevo total final */
     public void setTotalFinal(double totalFinal) { 
         this.totalFinal = totalFinal; 
+    }
+
+    // MEJORA: cambio para el test final
+    public double getDescuento() {
+        return descuento;
+    }
+
+    // MEJORA: cambio para el test final
+    public void setDescuento(double descuento) {
+        this.descuento = descuento;
+    }
+
+    // MEJORA: cambio para el test final
+    @Override
+    public String toString() {
+        return "Factura: " + codigoFactura + "\n" +
+               "Fecha de emision: " + fechaEmision + "\n" +
+               "Total neto: " + totalNeto + "\n" +
+               "Total IVA: " + totalIva + "\n" +
+               "Total envio: " + totalEnvio + "\n" +
+               "Descuento: " + descuento + "\n" +
+               "Total final: " + totalFinal;
     }
 
     /**

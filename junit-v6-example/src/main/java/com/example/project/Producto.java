@@ -1,13 +1,13 @@
 package com.example.project;
 
-// MEJORA: mejora para el test final
+// MEJORA: cambio para el test final
 public class Producto {
     
-    private int id; // MEJORA: mejora para el test final
+    private int id; // MEJORA: cambio para el test final
     private String nombre;
     private double precioBase;
 
-    // MEJORA: mejora para el test final
+// MEJORA: cambio para el test final    
     public Producto(int id, String nombre, double precioBase)
     {
         if (precioBase<0) {
@@ -18,12 +18,12 @@ public class Producto {
         this.precioBase=precioBase;
     }
 
-    // MEJORA: mejora para el test final
+// MEJORA: cambio para el test final    
     public int getId() {
         return id;
     }
 
-    // MEJORA: mejora para el test final
+// MEJORA: cambio para el test final    
     public void setId(int id) {
         this.id = id;
     }
@@ -44,7 +44,7 @@ public class Producto {
         this.precioBase = precioBase;
     }
 
-    // MEJORA: mejora para el test final
+// MEJORA: cambio para el test final    
     public double calcularPrecioFinal() {
         return precioBase;
     }

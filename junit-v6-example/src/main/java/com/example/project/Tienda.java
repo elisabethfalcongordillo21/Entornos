@@ -11,9 +11,9 @@ public class Tienda {
     private String direccion;
     private int telf;
 
-    private static int contadorFacturas = 1; // MEJORA: mejora para el test final
+    private static int contadorFacturas = 1; // MEJORA: cambio para el test final
 
-    // MEJORA: mejora para el test final
+    // MEJORA: cambio para el test final
     public Tienda() {}
 
     /**

@@ -3,7 +3,7 @@ public class ProductoFisico extends Producto {
 
     private double peso;
 
-    // MEJORA: mejora para el test final
+    // MEJORA: cambio para el test final
     public ProductoFisico(int id, String nombre, double precioBase, double peso) {
         super(id, nombre, precioBase);
         this.peso = peso;
@@ -33,7 +33,7 @@ public class ProductoFisico extends Producto {
             return 10;
     }
 
-    // MEJORA: mejora para el test final
+    // MEJORA: cambio para el test final
     public double calcularCosteEnvioPorPeso(String pais) {
         if (pais == null || pais.isEmpty()) return 0.0;
         return peso * 0.10;

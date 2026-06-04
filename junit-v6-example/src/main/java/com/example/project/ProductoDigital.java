@@ -6,7 +6,7 @@ public class ProductoDigital extends Producto {
     private double descuento;
     private String codigoLicencia;
 
-    // MEJORA: mejora para el test final
+    // MEJORA: cambio para el test final
     public ProductoDigital(int id, String nombre, double precio) {
         super(id, nombre, precio);
         this.tamanioDescarga = 0.0;
@@ -15,7 +15,7 @@ public class ProductoDigital extends Producto {
         this.codigoLicencia = "";
     }
 
-    // MEJORA: mejora para el test final
+    // MEJORA: cambio para el test final
     public ProductoDigital(int id, String nombre, double precio, double tamanioDescarga, double porcientoIVA, double descuento, String codigoLicencia) {
         super(id, nombre, precio);
         this.tamanioDescarga = tamanioDescarga;

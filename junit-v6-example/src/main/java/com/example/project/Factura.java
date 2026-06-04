@@ -106,7 +106,7 @@ public class Factura {
         this.totalFinal = totalFinal; 
     }
 
-    // MEJORA: cambio para el test final
+    // MEJORA: cambio para el test final    
     public double getDescuento() {
         return descuento;
     }

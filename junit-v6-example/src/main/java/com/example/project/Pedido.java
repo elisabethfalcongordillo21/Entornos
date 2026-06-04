@@ -8,12 +8,12 @@ import java.util.Map;
 
 public class Pedido {
 
-// MEJORA: mejora para el test final
+// MEJORA: cambio para el test final
 public static final String PRODUCT_LIST_EMPTY_EXCEPTION_MESSAGE = "El pedido no tiene productos";
 
 private int idPedido;
 private List<Producto> productos;
-private List<Integer> idsOriginales; // MEJORA: mejora para el test final
+private List<Integer> idsOriginales; // MEJORA: cambio para el test final
 private Map<Integer, Integer> cantidades;
 private Cliente cliente;
 
@@ -84,7 +84,7 @@ public Map<Integer, Integer> getCantidades()
 
 //metodos
 
-// MEJORA: mejora para el test final
+// MEJORA: cambio para el test final
     public void addProducto(Producto p, int cantidad)
 {
     if (p != null) {
@@ -128,7 +128,7 @@ public double calcularTotal()
     return total;
 }
 
-// MEJORA: mejora para el test final
+// MEJORA: cambio para el test final
     public double calcularEnvio(String pais)
 {
     double totalEnvio = 0.0;
@@ -165,7 +165,7 @@ public double calcularTotal()
     return totalEnvio;
 }
 
-// MEJORA: mejora para el test final
+// MEJORA: cambio para el test final
     public double calcularIva(String tipoIva)
 {
     double totalIva = 0.0;

@@ -190,7 +190,7 @@ public class GestionPedidosTest {
         assertFalse(c.getDescuento() > 0);
     }
 
-    // ===== CLIENTE - getters sin cubrir =====
+    //  CLIENTE - getters sin cubrir 
 
     @Test
     void testClienteGettersAdicionales() {
@@ -226,7 +226,7 @@ void testDescuentoFidelidadSinVip() {
     assertEquals(0.05, c.getDescuento());
 }
 
-// ===== PRODUCTO DIGITAL - aplicarIVA ramas =====
+// PRODUCTO DIGITAL - aplicarIVA 
 
 @Test
 void testAplicarIvaReducido() {
@@ -254,7 +254,7 @@ void testProductoDigitalGettersSetters() {
     assertNotNull(pd.toString());
 }
 
-// ===== PRODUCTO FISICO - coste envio =====
+// PRODUCTO FISICO - coste envio 
 
 @Test
 void testCosteEnvioItalia() {
@@ -274,7 +274,7 @@ void testCosteEnvioRestoMundo() {
     assertEquals(10.0, p.calcularCosteEnvio("Japon"), 0.001);
 }
 
-// ===== FACTURA - setters e imprimirFactura =====
+//FACTURA - setters e imprimirFactura 
 
 @Test
 void testFacturaSetters() {
@@ -309,7 +309,7 @@ void testImprimirFactura() {
     assertEquals(30.0, f.getTotalNeto(), 0.001);
 }
 
-// ===== TIENDA - getters y setters =====
+//  TIENDA - getters y setters 
 
 @Test
 void testTiendaGettersSetters() {
@@ -327,7 +327,7 @@ void testTiendaGettersSetters() {
     assertEquals(123456789, t.getTelf());
 }
 
-// ===== PEDIDO - eliminarProducto =====
+//  PEDIDO - eliminarProducto 
 
 @Test
 void testEliminarProducto() {
